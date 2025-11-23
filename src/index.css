@@ -1,0 +1,742 @@
+/* ---------- KEEP TAILWIND ---------- */
+@import "tailwindcss";
+
+/* ---------- GLOBAL ---------- */
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  background-color: #000000; /* full black */
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+/* ---------- LOGIN PAGE ---------- */
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  border: 2px solid #05ae78; /* emerald-600 */
+  border-radius: 18px;
+  padding: 40px 60px;
+  background: #000000;
+  width: 560px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-input {
+  background: transparent;
+  border: 2px solid #059669;
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  outline: none;
+  width: 300px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.login-input::placeholder {
+  color: #9ca3af; /* gray-400 */
+}
+
+.mt {
+  margin-top: 12px;
+}
+
+.login-btn {
+  margin-top: 20px;
+  width: 70%;
+  padding: 10px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background-color: #059669;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.16s ease;
+}
+
+.login-btn:hover {
+  background-color: #047857; /* emerald-700 */
+}
+
+/* Demo credentials box */
+.demo-box {
+  background: rgba(0, 0, 0, 0.38);
+  border: 1px solid #00b386;
+  padding: 16px 18px;
+  border-radius: 10px;
+  margin-top: 18px;
+  color: #e5e5e5;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.demo-box h3 {
+  font-size: 16px;
+  color: #00d48c;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.demo-section {
+  margin-bottom: 10px;
+}
+
+.code {
+  background: rgba(0, 255, 170, 0.12);
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: #00e6a8;
+  font-size: 13px;
+  border: 1px solid rgba(0, 255, 170, 0.12);
+}
+
+/* ---------- HEADER / NAV ---------- */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 40px;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+}
+
+.header-username {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: #dc2626; /* red-600 */
+  color: #ffffff;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #b91c1c; /* red-700 */
+}
+
+/* ---------- TASK COUNTERS ---------- */
+.task-numbers-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.box {
+  min-width: 260px;
+  flex: 1 1 260px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+}
+
+.box h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.box h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+/* color variants for boxes */
+.box.blue {
+  background-color: #60a5fa;
+}
+
+.box.green {
+  background-color: #4ade80;
+}
+
+.box.yellow {
+  background-color: #facc15;
+  color: #000;
+}
+
+.box.red {
+  background-color: #f87171;
+}
+
+/* ---------- CREATE TASK ---------- */
+.create-task-container {
+  background: #1c1c1c;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.create-task-form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-section {
+  width: 50%;
+  min-width: 240px;
+  box-sizing: border-box;
+}
+
+.right-section {
+  width: 40%;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+.create-task-container input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.create-task-container textarea {
+  width: 100%;
+  height: 180px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+  outline: none;
+  resize: none;
+}
+
+/* create button */
+.create-task-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.create-task-btn:hover {
+  background: #059669;
+}
+
+/* ---------- ALL TASK (ADMIN) ---------- */
+.alltask-container {
+  background: #1c1c1c;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  overflow-x: auto; /* allow horizontal scroll on narrow screens */
+}
+
+/* header row */
+.alltask-header {
+  background: #ef4444;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.alltask-header .col {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+/* rows */
+.alltask-row {
+  border: 2px solid #10b981;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.alltask-row .col {
+  font-size: 16px;
+  font-weight: 600;
+  width: 20%;
+  box-sizing: border-box;
+  margin-left: 0;
+}
+
+/* color helper classes */
+.text-blue {
+  color: #60a5fa;
+}
+
+.text-yellow {
+  color: #facc15;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-red {
+  color: #dc2626;
+}
+
+/* ---------- TASK LIST (employee cards horizontal) ---------- */
+#tasklist {
+  width: 100%;
+  margin-top: 40px;
+  padding: 6px 0;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+/* scrollbar styling */
+#tasklist::-webkit-scrollbar {
+  height: 6px;
+}
+
+#tasklist::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#tasklist::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+#tasklist {
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent;
+}
+
+/* ---------- TASK CARD ---------- */
+.taskcard {
+  min-height: 230px;
+  width: 340px;
+  padding: 18px;
+  border-radius: 14px;
+  color: white;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+.taskcard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6px;
+}
+
+.taskcard-badge {
+  background: #dc2626;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.taskcard-date {
+  font-size: 13px;
+  color: #f1f1f1;
+}
+
+.taskcard-title {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.taskcard-desc {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+/* footer buttons */
+.taskcard-footer {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.btn-complete,
+.btn-failed {
+  padding: 8px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-complete {
+  background: #22c55e;
+}
+
+.btn-complete:hover {
+  background: #16a34a;
+}
+
+.btn-failed {
+  background: #ef4444;
+}
+
+.btn-failed:hover {
+  background: #dc2626;
+}
+
+.taskcard-footer.single {
+  justify-content: center;
+}
+
+.full {
+  width: 50%;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* status color variants (card backgrounds) */
+.taskcard.new {
+  background: #60a5fa;
+}
+
+.taskcard.accept {
+  background: #fb7185;
+}
+
+.taskcard.complete {
+  background: #4ade80;
+  color: #000;
+}
+
+.taskcard.failed {
+  background: #f87171;
+}
+
+/* ---------- SMALL UI CLASSES ---------- */
+.col {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ---------- RESPONSIVE RULES (CLEANED & CONSOLIDATED) ---------- */
+
+/* Mobile / small phones */
+@media (max-width: 480px) {
+  .login-card {
+    width: 92%;
+    padding: 18px 16px;
+  }
+
+  .login-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .login-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .demo-box {
+    padding: 12px;
+  }
+
+  .taskcard {
+    width: 90%;
+    max-width: 320px;
+    min-height: 200px;
+    padding: 14px;
+    margin: 0 auto;
+  }
+
+  #tasklist {
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .header-username {
+    font-size: 20px;
+  }
+
+  .box {
+    min-width: 100%;
+  }
+
+  .alltask-header,
+  .alltask-row {
+    display: block;
+    padding: 10px;
+  }
+
+  .alltask-row .col,
+  .alltask-header .col {
+    width: 100%;
+    display: block;
+    margin: 6px 0;
+  }
+}
+
+/* Small tablets and landscape phones */
+@media (max-width: 768px) {
+  .login-card {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .task-numbers-wrapper {
+    gap: 12px;
+  }
+
+  .create-task-form {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #tasklist {
+    gap: 14px;
+    padding-bottom: 12px;
+  }
+
+  .box {
+    min-width: 48%;
+  }
+
+  .taskcard {
+    width: 300px;
+  }
+}
+
+/* Tablets / small desktops */
+@media (max-width: 1024px) {
+  .taskcard {
+    width: 320px;
+  }
+
+  .alltask-header,
+  .alltask-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .alltask-header .col,
+  .alltask-row .col {
+    width: 100%;
+    margin-left: 0;
+    font-size: 15px;
+  }
+}
+
+/* Large desktop tweaks */
+@media (min-width: 1280px) {
+  .login-card {
+    width: 560px;
+  }
+
+  .taskcard {
+    width: 360px;
+  }
+}
+
+/* ---------- ADMIN TABLE FINAL RESPONSIVE ADJUSTMENTS ---------- */
+/* For very narrow phones stack columns */
+/* ----- SIMPLE MOBILE BEHAVIOR FOR ADMIN TABLE ----- */
+@media (max-width: 600px) {
+  /* Header becomes vertical */
+  .alltask-header {
+    display: block !important;
+    padding: 15px;
+  }
+
+  .alltask-header .col {
+    width: 100% !important;
+    display: block;
+    margin: 6px 0;
+  }
+
+  /* Each employee row becomes vertical */
+  .alltask-row {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .alltask-row .col {
+    width: 100% !important;
+  }
+}
+
+/* Super-small phones */
+@media (max-width: 400px) {
+  /* Header stack */
+  .alltask-header {
+    display: block !important;
+    padding: 15px;
+  }
+
+  .alltask-header .col {
+    width: 100% !important;
+    display: block;
+    margin: 6px 0;
+  }
+
+  /* Employee rows stack */
+  .alltask-row {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .alltask-row .col {
+    width: 100% !important;
+  }
+}
+
+/* ---------- UTILITY HELPERS ---------- */
+.hidden {
+  display: none !important;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* small visual polish */
+.alltask-row:hover {
+  transform: translateY(-2px);
+  transition: transform 0.12s ease;
+}
+
+/* Mobile: task cards should stack vertically & scroll Y-axis */
+@media (max-width: 700px) {
+  #tasklist {
+    flex-direction: column !important; /* stack vertically */
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-y: auto !important; /* enable vertical scroll */
+    overflow-x: hidden !important; /* disable horizontal scroll */
+    max-height: 70vh; /* adjust height as needed */
+    padding-right: 10px; /* space for scrollbar */
+    margin-top: 40px;
+  }
+
+  .taskcard {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 30px 0 10px 0;
+  color: #ffffff;
+}
