@@ -1,16 +1,85 @@
-# React + Vite
+📌 TaskFlow — Employee Task Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive React-based Task Management System designed for small teams.
+Admins can create and assign tasks, while Employees can manage their workflow through a clean, intuitive UI.
 
-Currently, two official plugins are available:
+⭐ Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+(Add your Netlify link here once deployed)
+👉 https://yourprojectlink.netlify.app
 
-## React Compiler
+📝 Features
+👨‍💼 Admin Panel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Create and assign tasks to employees
 
-## Expanding the ESLint configuration
+View all employees with task statistics
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Track New, Active, Completed, and Failed tasks
+
+Fully responsive, mobile-friendly admin table
+
+👨‍💻 Employee Dashboard
+
+Clean Task Summary section
+
+Task Board with cards
+
+Horizontal scroll on desktops
+
+Vertical stacked scroll on mobile
+
+Accept / Complete / Fail tasks
+
+Task counters update automatically
+
+Everything is stored persistently in LocalStorage
+
+
+🔧 Tech Stack
+
+| Layer            | Technology               |
+| ---------------- | ------------------------ |
+| Frontend         | React.js                 |
+| UI               | TailwindCSS + Custom CSS |
+| State Management | Context API              |
+| Storage          | LocalStorage             |
+| Build Tool       | Vite / CRA               |
+
+🧠 How It Works
+🔹 Admin Flow
+
+Creates a task
+
+Task is assigned to an employee
+
+Saved in LocalStorage
+
+Employee’s counters update instantly
+
+🔹 Employee Flow
+
+Accept Task → becomes Active
+
+Mark as Complete → moves to Completed
+
+Mark as Failed → moves to Failed
+
+All changes synced to LocalStorage
+
+
+📱 Responsive Behavior
+
+Task cards → horizontal scroll on desktop
+
+Task cards → vertical stacked scroll on mobile
+
+Admin table → collapses into a stacked card layout on phones
+
+Login → fully responsive UI
+
+👤 Author
+
+Shaik Aman Sayer
+🔗 LinkedIn: https://www.linkedin.com/in/shaik-aman-sayer-503881250/
+
